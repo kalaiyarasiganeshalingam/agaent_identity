@@ -2,7 +2,7 @@ import ballerina/ai;
 
 configurable string addIdsToolBaseAuthUrl = ?;
 configurable string addIdsToolClientId = ?;
-// configurable string addIdsToolClientSecret = ?;
+configurable string addIdsToolScope = ?;
 configurable string addIdsToolRedirectUri = ?;
 
 # Adds two identifiers together and returns the resulting sum.
@@ -14,7 +14,7 @@ configurable string addIdsToolRedirectUri = ?;
         baseAuthUrl: addIdsToolBaseAuthUrl,
         clientId: addIdsToolClientId,
         redirectUri: addIdsToolRedirectUri,
-        scopes: "add",
+        scopes: addIdsToolScope,
         isPkceEnabled: true
     }
 }
